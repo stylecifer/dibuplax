@@ -1,4 +1,5 @@
-/* Plax version 1.4.1 */
+/* DIBÚJALO */
+/* Plax version 1.4.1 */ 
 
 /*
   Copyright (c) 2011 Cameron McEfee
@@ -28,7 +29,8 @@
   var maxfps             = 25,
       delay              = 1 / maxfps * 1000,
       lastRender         = new Date().getTime(),
-      layers             = [],
+      layers             = [ 
+      ],
       plaxActivityTarget = $(window),
       motionDegrees      = 30,
       motionMax          = 1,
