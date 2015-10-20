@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+  <head>
+    <meta charset="UTF-8"></meta>
+    <title>Dibújalo Plax Page</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <!-- <script src="http://s3.amazonaws.com/ender-js/jeesh.min.js"></script> -->
+
+    <script type="text/javascript" src="js/plax.js"></script>
+    <style type="text/css">
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      body {
+        background: #ebeae6 url(img/body_bg.png) top left repeat;
+        position: relative;
+      }
+      div#shell {
+        display: block;
+        position: relative;
+        margin: 100px auto;
+        width: 1100px;
+        height: 450px;
+      }
+      div#shell.outline{
+        border: 1px solid #cccbc8;
+      }
+      div#shell{
+        z-index: 1;
+        overflow: hidden;
+      }
+      img#bg-layer {
+        position: absolute;
+        top: -12px;
+        right: -15px;
+        z-index: 0;
+      }
+      img#logo-dibu {
+        position: absolute;
+        z-index: 1;
+        top: 4%;
+        left: 15%;
+      }
+      img#chica {
+        position: absolute;
+        top: 90px;
+        left: 42%;
+        z-index: 2;
+      }
+    </style>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#bg-layer').plaxify({"xRange":30,"yRange":10, "invert":true})
+        $('#logo-dibu').plaxify({"xRange":10,"yRange":5})
+        $('#chica').plaxify({"xRange":50,"yRange":20})
+        $.plax.enable({ })
+      })
+    </script>
+
+
+  </head>
+  <body>
+    <div id="shell" class="outline">
+      <img src="img/bg-layer-1.jpg" width="1170" height="477" id="bg-layer"/>
+      <img src="img/dibu-layer-2.png" width="640" height="348" id="logo-dibu"/>
+      <img src="img/chica-layer-3.png" width="307" height="491" id="chica"/>
+      
+    </div>
+  </body>
+</html>
